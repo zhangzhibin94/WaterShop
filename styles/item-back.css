@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {/*垂直居中*/
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {/*防止多行文本框拖动*/
+    resize: none;
+}
+
+
+img {/*  去掉图片低测默认的3像素空白缝隙*/
+    border: 0;
+    vertical-align: middle;
+}
+
+
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0197FF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+/*css 初始化结束 */
+/*右侧导航栏开始*/
+
+#menu{
+    height: 100%;
+}
+.main-menu{
+    width: 256px;
+    background: rgb(0,21,41);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+}
+.main-menu-title{
+    height: 65px;
+    width: 100%;
+    background: rgb(0,33,64);
+    line-height: 65px;
+    height: 65px;
+}
+.main-menu-title-logo{
+    margin-left: 24px;
+}
+.main-menu-title-logo a img{
+     height: 32px;
+    display: inline-block;
+ }
+.main-menu-title-logo a h1{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22px;
+    margin: 0 0 0 12px;
+    font-family: Avenir,Helvetica Neue,Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+}
+.main-menu-content{
+    padding: 16px 0;
+    width: 100%;
+    font-size: 15px;
+}
+.main-menu-content-first{
+    color: #ffffff;
+    margin: 4px 0;
+    cursor: pointer;
+}
+.main-menu-content-title-first{
+    padding: 0 34px 0 24px;
+    line-height: 40px;
+    height: 40px;
+    display:flex;
+    align-items:center;/*垂直居中*/
+}
+.main-menu-content-title-first .item-logo{
+    height: 20px;
+}
+.main-menu-content-title-first span{
+    line-height: 41px;
+    margin-left: 5px;
+}
+.arrow-down{
+    flex: 1;
+    text-align: right;
+}
+.arrow-down-icon{
+    height: 12px;
+}
+.main-menu-content-second{
+    background: rgb(0,12,23);
+    width: 100%;
+    transition: all linear 0.5s;
+}
+.main-menu-item{
+    padding-left: 48px;
+    line-height: 40px;
+    height: 40px;
+    list-style-position: inside;
+}
+.active{
+    background-color: rgb(24,144,255);
+}
+.title-active{
+    background: rgb(0,12,23);
+}
+.ng-hide {
+    height: 0;
+}
+ .ant-menu-sub {
+    max-height:0px;
+    transition:max-height 0.5s;
+    -webkit-transition:max-height 0.5s; /* Safari */
+    overflow:hidden;
+     background: #000c17;
+     box-shadow: inset 0 2px 8px rgba(0,0,0,.45);
+     font-size: 14px;
+}
+.h300{
+    max-height: 200px;
+}
+.ml-2{
+    margin-left: 2px;
+}
+.ml-7{
+    margin-left: 7px;
+}
+/*右侧导航栏结束*/
+/*顶部灯塔开始*/
+#lightHouse{
+    width: 100%;
+}
+.line-house-box{
+    /*display: flex;*/
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+
+}
+.show-menu{
+    padding: 22px 26px;
+    height: 64px;
+    width: 68px;
+    display: inline-block;
+}
+.anticon{
+    font-size: 20px;
+    height: 64px;
+    cursor: pointer;
+    transition: all .3s,padding 0s;
+    display: inline-block;
+    font-style: normal;
+    vertical-align: -.125em;
+    text-align: center;
+    text-transform: none;
+    line-height: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.line-house-right{
+    float: right;
+    height: 100%;
+    line-height: 64px;
+    display: flex;
+}
+.line-house-glass{
+    padding: 3px 12px;
+    display: inline-block;
+    height: 100%;
+    cursor: pointer;
+}
+.line-house-glass:hover{
+    background: #eeeeee;
+}
+.line-house-message{
+    position: relative;
+}
+.red-message{
+    position: absolute;
+    top: 10px;
+    left: 17px;
+    width: 30px;
+    height: 20px;
+    background: red;
+    display: inline-block;
+    border-radius: 15px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+.water-avatar{
+    width: 24px;
+    height: 24px;
+   /* display: inline-block;*/
+    border-radius: 50%;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.line-house-avatar{
+    padding: 0px 25px 0 12px;
+    display: inline-block;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.water-avatar-list{
+    position: absolute;
+    line-height: 25px;
+    width: 160px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    left: -65px;
+    border-radius: 5px;
+    z-index: 999;
+}
+.water-avatar-list li{
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #888;
+}
+.water-avatar-list li:hover{
+    background: rgb(230,247,255);
+}
+.my-info-li{
+    margin-top: 7px;
+}
+.water-avatar-img{
+    width: 24px;
+}
+.my-info-span{
+    margin-left: 10px;
+}
+.my-setting-li{
+    border-bottom: 1px solid #eee;
+}
+.water-avatar-list li span i{
+    display: flex;align-items: center
+}
+/*顶部灯塔结束*/
